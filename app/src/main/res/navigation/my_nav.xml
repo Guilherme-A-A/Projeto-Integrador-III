@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/consultarFragment">
+
+    <fragment
+        android:id="@+id/consultarFragment"
+        android:name="br.com.fiscal.zonaazulfiscal.fragments.ConsultarFragment"
+        android:label="Consulta de Placa"
+        tools:layout="@layout/fragment_consultar" />
+    <fragment
+        android:id="@+id/irregularidadeFragment2"
+        android:name="br.com.fiscal.zonaazulfiscal.irregularidadeFragment"
+        android:label="Registro de Irregularidade"
+        tools:layout="@layout/fragment_irregularidade" />
+    <fragment
+        android:id="@+id/itnerarioFragment"
+        android:name="br.com.fiscal.zonaazulfiscal.fragments.ItnerarioFragment"
+        android:label="fragment_itnerario"
+        tools:layout="@layout/fragment_itnerario" />
+</navigation>

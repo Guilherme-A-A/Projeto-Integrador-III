@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ConsultarFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/azulBotao"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplicativo do fiscal"
+            android:textAlignment="center"
+            android:background="@drawable/toolbarfragments"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bebas_neue"
+            android:textSize="22dp"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo_certo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Consulta de Veículo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/outlineNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:hint="Placa do veículo (Ex : FFZ6590)"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConsultar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consultar Placa"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button"
+        android:textColor="@color/white"
+        android:elevation="20dp"
+        android:layout_marginTop="40dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressConsultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/azulBotao"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/view"
+        android:elevation="16dp"
+        android:id="@+id/informacaoPlaca"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPlacaIrregular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Placa do veículo  :  FFZ6274"
+            android:textAlignment="center"
+            android:fontFamily="@font/bebas_neue"
+            android:textColor="@color/teal_700"
+            android:layout_marginTop="5dp"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.013" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIrregular3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="210dp"
+            android:gravity="center_horizontal"
+            android:text="Motivo :"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.344" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIrregular2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:text="Irregular"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/vermelho"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.121" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIrregular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="110dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_horizontal"
+            android:text="Situação do veículo :"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.124" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIrregularMotivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="100dp"
+            android:gravity="center_horizontal"
+            android:text="Tempo Excedido"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/vermelho"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.338" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIrregularDeseja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Deseja registrar irregularidade?"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginTop="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnYes"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:background="@drawable/buttonyes"
+            android:backgroundTint="@color/greenyes"
+            android:src="@drawable/ic_baseline_check_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIrregular"
+            app:layout_constraintVertical_bias="1.0">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnNo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:background="@drawable/buttonyes"
+            android:backgroundTint="@color/vermelhono"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.657"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIrregular"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/informacaoPlaca2"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/view"
+        android:elevation="16dp"
+        android:visibility="gone">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPlacaRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Placa de veículo  :  FFZ6274"
+            android:fontFamily="@font/bebas_neue"
+            android:textColor="@color/teal_700"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="110dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center_horizontal"
+            android:text="Situação do veículo :"
+            android:textSize="18dp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginTop="39dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.124" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegular2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_horizontal"
+            android:text="Regular"
+            android:textColor="@color/azulBotao"
+            android:textSize="20dp"
+            android:fontFamily="@font/lato_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.098" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNovaPlaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/greenyes"
+            android:text="Consultar Nova Placa"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegular"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutNoConnection"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/view"
+        android:layout_marginEnd="30dp"
+        android:elevation="20dp"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Erro ao consultar veículo, por favor verifique sua conexão com a internet"
+            android:textColor="@color/vermelhono"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTentarNovamente"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="15dp"
+            android:text="Tentar novamente"
+            android:textSize="12dp"
+            android:background="@drawable/buttoninternet"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imgZonaAzul"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/zonaazulimg" />
+
+
+
+
+</LinearLayout>

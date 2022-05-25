@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Consultar Veículo"
+        android:icon="@drawable/ic_baseline_directions_car_24"
+        android:id="@+id/consultarFragment"/>
+
+
+    <item android:title="Itnerário Fiscal"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:id="@+id/itnerarioFragment"/>
+
+    <item android:title="Irregularidade"
+        android:icon="@drawable/ic_baseline_announcement_24"
+        android:id="@+id/irregularidadeFragment2"/>
+
+</menu>

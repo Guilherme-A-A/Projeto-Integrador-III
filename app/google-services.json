@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856576039081",
+    "project_id": "zonaazulfiscal-7640c",
+    "storage_bucket": "zonaazulfiscal-7640c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856576039081:android:55135b3d615b0c8c8b31b8",
+        "android_client_info": {
+          "package_name": "br.com.fiscal.zonaazulfiscal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856576039081-l07875qkbn3v1pirq20pmtbhvbnn58vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7zbeFgcv-k7MDJa_wxKNB2f29AIfb8nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856576039081-l07875qkbn3v1pirq20pmtbhvbnn58vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

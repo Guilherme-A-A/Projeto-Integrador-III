@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintTotalIrregularidadeActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IrregularidadeActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView5"
+        android:layout_width="171dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/laranjafundoimg"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/traseiraveiculo" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView4"
+        android:layout_width="171dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="27dp"
+        android:background="@color/laranjafundoimg"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/lateraldireitaveiculo" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView3"
+        android:layout_width="171dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="27dp"
+        android:background="@color/laranjafundoimg"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/lateralesquerdaveiculo" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlineDescricao"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:hint="Descrição(Máximo 20 caracteres)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegistrarIrregularidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button"
+        android:text="Registrar Irregularidade"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <ProgressBar
+        android:id="@+id/progressIrregularidadeActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/azulBotao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarIrregularidade"
+        android:visibility="gone"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="171dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="27dp"
+        android:background="@color/laranjafundoimg"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frenteveiclo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
